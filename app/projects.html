@@ -27,13 +27,74 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="jumbotron animated flipInX">
-      <h1>Coming soon...to a browser near you!</h1>
-      <h1><small>A simple, personal site built by <a href="https://github.com/jtferns">@jtferns</a>.</small></h1>
-    </div>
-
-    <div class="text-center">
-      <a class="btn btn-link" href="projects.html" role="button">Projects</a>
+    <div class="container">
+      <div class="text-center">
+        <a class="btn btn-link" href="/" role="button">Home</a>
+      </div>
+      <div class="panel panel-default hidden">
+        <div class="panel-heading">
+          <h3 class="panel-title">Oculi Crafter</h3>
+        </div>
+        <div class="panel-body">
+          <a class="btn btn-link" href="http://pbjapps.github.io/oculi_crafter/" role="button">http://pbjapps.github.io/oculi_crafter/</a>
+        </div>
+      </div>
+      <div class="panel panel-default hidden">
+        <div class="panel-heading">
+          <h3 class="panel-title">Symphony Daily Devotions App</h3>
+        </div>
+        <div class="panel-body">
+          <a class="btn btn-link" href="https://github.com/pbjapps/sdd-android" role="button">https://github.com/pbjapps/sdd-android</a>
+        </div>
+      </div>
+      <div class="panel panel-default hidden">
+        <div class="panel-heading">
+          <h3 class="panel-title">"Pwning" Netgear WNDR Routers</h3>
+        </div>
+        <div class="panel-body">
+          WIP
+        </div>
+      </div>
+      <div class="panel panel-default hidden">
+        <div class="panel-heading">
+          <h3 class="panel-title">KocoonTech LLC, Prototyping Sensor Mote</h3>
+        </div>
+        <div class="panel-body">
+          WIP
+        </div>
+      </div>
+      <div class="panel panel-default hidden">
+        <div class="panel-heading">
+          <h3 class="panel-title">Multicycle CPU Design</h3>
+        </div>
+        <div class="panel-body">
+          WIP
+        </div>
+      </div>
+      <div class="panel panel-default hidden">
+        <div class="panel-heading">
+          <h3 class="panel-title">MSP430 "Lighthouse"</h3>
+        </div>
+        <div class="panel-body">
+          WIP
+        </div>
+      </div>
+      <div class="panel panel-default hidden">
+        <div class="panel-heading">
+          <h3 class="panel-title">Custom FPGA Microprocessor"</h3>
+        </div>
+        <div class="panel-body">
+          WIP
+        </div>
+      </div>
+      <div class="panel panel-default hidden">
+        <div class="panel-heading">
+          <h3 class="panel-title">ImageRecognizer App</h3>
+        </div>
+        <div class="panel-body">
+          WIP
+        </div>
+      </div>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -70,5 +131,17 @@
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
+
+        <script>
+          var panels = $('.panel');
+          function showPanel() {
+            panel = [].shift.call(panels);
+            $(panel).addClass('animated fadeInDown').removeClass("hidden");
+            $(panel).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+              showPanel();
+            });
+          }
+          showPanel();
+        </script>
 </body>
 </html>
