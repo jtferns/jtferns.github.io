@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Janoo Fernandes :: Projects</title>
+    <title>Janoo Fernandes :: Resume</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css styles/vendor.css -->
@@ -28,76 +28,18 @@
     <![endif]-->
 
     <div class="container">
+      <ul class="nav nav-pills nav-justified">
+        <li role="presentation"><a href="/">Home</a></li>
+        <li role="presentation"><a href="projects.html">Projects</a></li>
+        <li role="presentation" class="active"><a href="resume.html">Resume</a></li>
+      </ul>
+
+      <div class="jumbotron hidden">
+        <span class="message"></span>
+      </div>
+
       <div class="text-center">
-        <ul class="nav nav-pills nav-justified">
-          <li role="presentation"><a href="/">Home</a></li>
-          <li role="presentation" class="active"><a href="projects.html">Projects</a></li>
-          <li role="presentation"><a href="resume.html">Resume</a></li>
-        </ul>
-      </div>
-      <div class="panel panel-default hidden">
-        <div class="panel-heading">
-          <h3 class="panel-title">Oculi Crafter</h3>
-        </div>
-        <div class="panel-body">
-          <a class="btn btn-link" href="http://pbjapps.github.io/oculi_crafter/" role="button">http://pbjapps.github.io/oculi_crafter/</a>
-        </div>
-      </div>
-      <div class="panel panel-default hidden">
-        <div class="panel-heading">
-          <h3 class="panel-title">Symphony Daily Devotions App</h3>
-        </div>
-        <div class="panel-body">
-          <a class="btn btn-link" href="https://github.com/pbjapps/sdd-android" role="button">https://github.com/pbjapps/sdd-android</a>
-        </div>
-      </div>
-      <div class="panel panel-default hidden">
-        <div class="panel-heading">
-          <h3 class="panel-title">"Pwning" Netgear WNDR Routers</h3>
-        </div>
-        <div class="panel-body">
-          WIP
-        </div>
-      </div>
-      <div class="panel panel-default hidden">
-        <div class="panel-heading">
-          <h3 class="panel-title">KocoonTech LLC, Prototyping Sensor Mote</h3>
-        </div>
-        <div class="panel-body">
-          WIP
-        </div>
-      </div>
-      <div class="panel panel-default hidden">
-        <div class="panel-heading">
-          <h3 class="panel-title">Multicycle CPU Design</h3>
-        </div>
-        <div class="panel-body">
-          WIP
-        </div>
-      </div>
-      <div class="panel panel-default hidden">
-        <div class="panel-heading">
-          <h3 class="panel-title">MSP430 "Lighthouse"</h3>
-        </div>
-        <div class="panel-body">
-          WIP
-        </div>
-      </div>
-      <div class="panel panel-default hidden">
-        <div class="panel-heading">
-          <h3 class="panel-title">Custom FPGA Microprocessor"</h3>
-        </div>
-        <div class="panel-body">
-          WIP
-        </div>
-      </div>
-      <div class="panel panel-default hidden">
-        <div class="panel-heading">
-          <h3 class="panel-title">ImageRecognizer App</h3>
-        </div>
-        <div class="panel-body">
-          WIP
-        </div>
+
       </div>
     </div>
 
@@ -138,15 +80,39 @@
         <!-- endbuild -->
 
         <script>
-          var panels = $('.panel');
-          function showPanel() {
-            panel = [].shift.call(panels);
-            $(panel).addClass('animated fadeInDown').removeClass("hidden");
-            $(panel).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-              showPanel();
-            });
+          var options = {
+            strings: ["Searching ^200 for ^300 resume ^500...", "...", "Error! ^500 Please check back again ^500 soon. ^5000"],
+            // typing speed
+            typeSpeed: 0,
+            // time before typing starts
+            startDelay: 0,
+            // backspacing speed
+            backSpeed: 0,
+            // time before backspacing
+            backDelay: 500,
+            // loop
+            loop: true,
+            // false = infinite
+            loopCount: false,
+            // show cursor
+            showCursor: true,
+            // character for cursor
+            cursorChar: "|",
+            // attribute to type (null == text)
+            attr: null,
+            // either html or text
+            contentType: 'text',
+            // call when done callback function
+            callback: function() {},
+            // starting callback function before each string
+            preStringTyped: function() {},
+            //callback for every typed string
+            onStringTyped: function() {},
+            // callback for reset
+            resetCallback: function() {}
           }
-          showPanel();
+          $(".jumbotron").addClass('animated bounceIn').removeClass("hidden");
+          $(".message").typed(options);
         </script>
 </body>
 </html>
