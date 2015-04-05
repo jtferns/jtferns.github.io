@@ -1,6 +1,6 @@
-<!doctype html> <html class=no-js> <head> <meta charset=utf-8> <meta name=description> <meta name=viewport content="width=device-width, initial-scale=1"> <title>Janoo Fernandes :: Home</title>  <link rel=stylesheet href=styles/vendor.css> <link rel=stylesheet href=styles/main.css> <script src=scripts/vendor/modernizr.js></script> </head> <body> <!--[if lt IE 10]>
+<!doctype html> <html class=no-js> <head> <meta charset=utf-8> <meta name=description> <meta name=viewport content="width=device-width, initial-scale=1"> <title>Janoo Fernandes :: Resume</title>  <link rel=stylesheet href=styles/vendor.css> <link rel=stylesheet href=styles/main.css> <script src=scripts/vendor/modernizr.js></script> </head> <body> <!--[if lt IE 10]>
  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
- <![endif]--> <div class=container> <ul class="nav nav-pills nav-justified"> <li role=presentation class=active><a href="/">Home</a></li> <li role=presentation><a href=projects.html>Projects</a></li> <li role=presentation><a href=resume.html>Resume</a></li> </ul> </div> <div class="jumbotron hidden"> <h1>Coming soon... to a browser near you!</h1> <span class=message></span> </div>  <script>
+ <![endif]--> <div class=container> <ul class="nav nav-pills nav-justified"> <li role=presentation><a href="/">Home</a></li> <li role=presentation><a href=projects.html>Projects</a></li> <li role=presentation class=active><a href=resume.html>Resume</a></li> </ul> <div class="jumbotron hidden"> <span class=message></span> </div> <div class=text-center> </div> </div>  <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
@@ -9,7 +9,7 @@
       ga('create','UA-37323508-3');ga('send','pageview');
     </script> <script src=scripts/vendor.js></script> <script src=scripts/plugins.js></script> <script src=scripts/main.js></script> <script>
           var options = {
-            strings: ['<h1><small>A simple, ^400 personal ^400 site built by ^200 <a href="https://github.com/jtferns">@jtferns</a>.</small></h1>'],
+            strings: ["Searching ^200 for ^300 resume ^500...", "...", "Error! ^500 Please check back again ^500 soon. ^5000"],
             // typing speed
             typeSpeed: 0,
             // time before typing starts
@@ -19,17 +19,17 @@
             // time before backspacing
             backDelay: 500,
             // loop
-            loop: false,
+            loop: true,
             // false = infinite
             loopCount: false,
             // show cursor
-            showCursor: false,
+            showCursor: true,
             // character for cursor
             cursorChar: "|",
             // attribute to type (null == text)
             attr: null,
             // either html or text
-            contentType: 'html',
+            contentType: 'text',
             // call when done callback function
             callback: function() {},
             // starting callback function before each string
@@ -39,8 +39,6 @@
             // callback for reset
             resetCallback: function() {}
           }
-          $(".jumbotron").addClass('animated flipInX').removeClass("hidden");
-          $(".jumbotron").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $(".message").typed(options);
-          });
+          $(".jumbotron").addClass('animated bounceIn').removeClass("hidden");
+          $(".message").typed(options);
         </script> </body> </html> 
