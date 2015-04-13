@@ -119,3 +119,40 @@ body {
 ul.nav {
   margin-bottom: 20px;
 }
+
+// Borrow d3.js's d3.scale.category20() color scale
+$category1: #1f77b4;
+$category2: #aec7e8;
+$category3: #ff7f0e;
+$category4: #ffbb78;
+$category5: #2ca02c;
+$category6: #98df8a;
+$category7: #d62728;
+$category8: #ff9896;
+$category9: #9467bd;
+$category10: #c5b0d5;
+$category11: #8c564b;
+$category12: #c49c94;
+$category13: #e377c2;
+$category14: #f7b6d2;
+$category15: #7f7f7f;
+$category16: #c7c7c7;
+$category17: #bcbd22;
+$category18: #dbdb8d;
+$category19: #17becf;
+$category20: #9edae5;
+
+.label-personal {
+  color: $category1;
+  background-color: $category2;
+}
+
+.label-team {
+  color: $category3;
+  background-color: $category4;
+}
+
+.label-course {
+  color: $category5;
+  background-color: $category6;
+}
