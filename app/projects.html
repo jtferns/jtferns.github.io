@@ -32,7 +32,7 @@
         <ul class="nav nav-pills nav-justified">
           <li role="presentation"><a href="/">Home</a></li>
           <li role="presentation" class="active"><a href="projects.html">Projects</a></li>
-          <li role="presentation"><a href="resume.html">Resume</a></li>
+          <li role="presentation"><a href="components.html">Components</a></li>
         </ul>
       </div>
       <div class="panel panel-default hidden">
@@ -165,9 +165,7 @@
           </h3>
         </div>
         <div class="panel-body">
-
-          <br>
-          WIP
+          A project for BU EC521 Cybersecurity, where we reproduced a BlackHat talk on hacking a Netgear small office/home office router.
         </div>
         <div class="panel-footer">
           .
@@ -189,9 +187,7 @@
           </h3>
         </div>
         <div class="panel-body">
-
-          <br>
-          WIP
+          A project for BU EC413 Computer Organization, where I designed and implemented a Multicycle CPU in Verilog.
         </div>
         <div class="panel-footer">
           .
@@ -212,9 +208,7 @@
           </h3>
         </div>
         <div class="panel-body">
-
-          <br>
-          WIP
+          A project for BU EC450 Microprocessors, where we created a custom laboratory barcode scanner using a CD-ROM drive bay, a laser pointer, and an MSP430.
         </div>
         <div class="panel-footer">
           .
@@ -236,9 +230,7 @@
           </h3>
         </div>
         <div class="panel-body">
-
-          <br>
-          WIP
+          A project for BU EC311 Logic Design, where we designed and implemented a custom single-cycle CPU in Verilog and an instruction set with a C compiler.
         </div>
         <div class="panel-footer">
           .
@@ -260,9 +252,7 @@
           </h3>
         </div>
         <div class="panel-body">
-
-          <br>
-          WIP
+          A project for BU EC327 Software Engineering, where we designed an Android application to save images, tag them, and recognize them in future images.
         </div>
         <div class="panel-footer">
           .
@@ -272,6 +262,14 @@
             <span class="label label-team">team</span>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="text-center">
+        <h2>
+          <a href="https://github.com/jtferns/jtferns.github.io" role="button"><i class="fa fa-lg fa-fw fa-github"></i></a>
+        </h2>
       </div>
     </div>
 
@@ -315,7 +313,7 @@
           var panels = $('.panel');
           function showPanel() {
             panel = [].shift.call(panels);
-            $(panel).addClass('animated fadeInDown').removeClass("hidden");
+            $(panel).addClass('animated fadeInUp').removeClass("hidden");
             $(panel).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
               showPanel();
             });

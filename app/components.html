@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Janoo Fernandes :: Home</title>
+    <title>Janoo Fernandes :: Components</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css styles/vendor.css -->
@@ -29,15 +29,40 @@
 
     <div class="container">
       <ul class="nav nav-pills nav-justified">
-        <li role="presentation" class="active"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/">Home</a></li>
         <li role="presentation"><a href="projects.html">Projects</a></li>
-        <li role="presentation"><a href="components.html">Components</a></li>
+        <li role="presentation" class="active"><a href="components.html">Components</a></li>
       </ul>
-    </div>
 
-    <div class="jumbotron hidden">
-      <h1>Coming soon... to a browser near you!</h1>
-      <span class="message"></span>
+      <!-- <div class="jumbotron hidden">
+        <span class="message"></span>
+      </div> -->
+
+      <div class="text-center">
+        This site was made with <i class="fa fa-lg fa-fw fa-heart"></i> using the following components:
+      </div>
+
+      <div class="well well-lg hidden">
+        <a href="http://yeoman.io/">Yeoman</a>
+      </div>
+      <div class="well well-lg hidden">
+        <a href="http://gulpjs.com/">Gulp.js</a>
+      </div>
+      <div class="well well-lg hidden">
+        <a href="http://getbootstrap.com/">Bootstrap</a>
+      </div>
+      <div class="well well-lg hidden">
+        <a href="http://modernizr.com/">Modernizr</a>
+      </div>
+      <div class="well well-lg hidden">
+        <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>
+      </div>
+      <div class="well well-lg hidden">
+        <a href="http://daneden.github.io/animate.css/">Animate.css</a>
+      </div>
+      <div class="well well-lg hidden">
+        <a href="http://www.mattboldt.com/demos/typed-js/">Typed.js</a>
+      </div>
     </div>
 
     <div class="container">
@@ -85,41 +110,15 @@
         <!-- endbuild -->
 
         <script>
-          var options = {
-            strings: ['<h1><small>A simple, ^400 personal ^400 site built by ^200 <a href="https://github.com/jtferns">@jtferns</a>.</small></h1>'],
-            // typing speed
-            typeSpeed: 0,
-            // time before typing starts
-            startDelay: 0,
-            // backspacing speed
-            backSpeed: 0,
-            // time before backspacing
-            backDelay: 500,
-            // loop
-            loop: false,
-            // false = infinite
-            loopCount: false,
-            // show cursor
-            showCursor: false,
-            // character for cursor
-            cursorChar: "|",
-            // attribute to type (null == text)
-            attr: null,
-            // either html or text
-            contentType: 'html',
-            // call when done callback function
-            callback: function() {},
-            // starting callback function before each string
-            preStringTyped: function() {},
-            //callback for every typed string
-            onStringTyped: function() {},
-            // callback for reset
-            resetCallback: function() {}
-          }
-          $(".jumbotron").addClass('animated pulse').removeClass("hidden");
-          $(".jumbotron").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $(".message").typed(options);
+        var wells = $('.well');
+        function showPanel() {
+          well = [].shift.call(wells);
+          $(well).addClass('animated fadeInRight').removeClass("hidden");
+          $(well).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+            showPanel();
           });
+        }
+        showPanel();
         </script>
 </body>
 </html>
