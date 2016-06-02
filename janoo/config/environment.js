@@ -16,7 +16,24 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    metricsAdapters: [
+      {
+        name: 'GoogleAnalytics',
+        environments: ['production'],
+        config: {
+          id: 'UA-37323508-6'
+        }
+      },
+      {
+        name: 'Mixpanel',
+        environments: ['production'],
+        config: {
+          token: 'f3ae0e81fc8379cf940425eefa773a18'
+        }
+      }
+    ]
   };
 
   if (environment === 'development') {
