@@ -1,0 +1,530 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" href="/favicon.ico"><meta name="generator" content="Astro v6.4.4"><meta name="description" content="weekend prototyper · rdm enjoyer · deckbuilder"><link rel="canonical" href="https://jtferns.github.io/diagrams/"><title>diagrams · j4n00.</title><meta property="og:type" content="website"><meta property="og:url" content="https://jtferns.github.io/diagrams/"><meta property="og:title" content="diagrams · j4n00."><meta property="og:description" content="weekend prototyper · rdm enjoyer · deckbuilder"><meta property="og:image" content="https://jtferns.github.io/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="diagrams · j4n00."><meta name="twitter:description" content="weekend prototyper · rdm enjoyer · deckbuilder"><meta name="twitter:image" content="https://jtferns.github.io/og-image.png"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><style>.astro-route-announcer{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}:root{--font-display: "Space Grotesk", system-ui, sans-serif;--font-body: "Space Grotesk", system-ui, sans-serif;--font-mono: "Space Mono", ui-monospace, Menlo, monospace;--pastel-salmon: #fbb4ae;--pastel-blue: #b3cde3;--pastel-green: #ccebc5;--pastel-purple: #decbe4;--pastel-orange: #fed9a6;--pastel-yellow: #ffffcc;--pastel-tan: #e5d8bd;--pastel-pink: #fddaec;--pastel-gray: #f2f2f2;--ink: #1a1a1a;--ink-900: #111827;--ink-700: #374151;--ink-600: #6b7280;--ink-tag: #1f2937;--accent-link: #7c3aed;--fg1: rgba(0, 0, 0, .85);--fg2: rgba(0, 0, 0, .45);--fg3: rgba(0, 0, 0, .28);--fg4: rgba(0, 0, 0, .2);--fg-footer: rgba(0, 0, 0, .4);--border-strong: rgba(0, 0, 0, .7);--border-hairline: rgba(0, 0, 0, .2);--surface-card: rgba(255, 255, 255, .7);--surface-hover: rgba(0, 0, 0, .06);--radius-xs: 2px;--radius-sm: 3px;--radius-md: .5rem;--radius-pill: 9999px;--border-thin: 1px;--border-thick: 2px;--track-tight: -.04em;--track-normal: .04em;--track-wide: .18em;--track-wider: .22em}*,*:before,*:after{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0;width:100%;min-height:100%;font-family:var(--font-body);color:var(--ink);-webkit-font-smoothing:antialiased}#bg{position:fixed;inset:0;z-index:-1;animation:colorchange 180s infinite;will-change:background-color}@keyframes colorchange{0%{background:#fbb4ae}6%{background:#b3cde3}12%{background:#ccebc5}18%{background:#decbe4}24%{background:#fed9a6}30%{background:#ffc}36%{background:#e5d8bd}42%{background:#fddaec}48%{background:#f2f2f2}54%{background:#f2f2f2}60%{background:#fddaec}66%{background:#e5d8bd}72%{background:#ffc}78%{background:#fed9a6}84%{background:#decbe4}90%{background:#ccebc5}96%{background:#b3cde3}to{background:#fbb4ae}}@keyframes fadeUp{0%{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media(prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style>
+<link rel="stylesheet" href="/_astro/diagrams.BMtpsgA8.css">
+<style>.dg-thumb pre.mermaid{margin:0;font-size:0}.dg-thumb svg{display:block;width:100%;height:auto}
+</style></head> <body> <div id="bg" data-astro-transition-persist="astro-coppatqy-1"></div>  <a href="/" class="backlink">← j4n00.</a> <div class="dg-wrap"> <header class="dg-masthead"> <p class="dg-kicker">collected diagrams</p> <h1 class="dg-title">diagrams<span class="dot">.</span></h1> <p class="dg-lede">
+A working set of flowcharts, sequences, schemas and the odd state machine. Some are a
+        glance; others need room. Open any to read it up close.
+</p> <p class="dg-count">8 diagrams · 3 types</p> </header> <main class="dg-gallery"> <a href="/diagrams/folio-workflow" class="dg-card" style="animation: fadeUp .5s 0.00s ease both"> <div class="dg-thumb" data-slug="folio-workflow"> <pre class="mermaid">flowchart TD
+    subgraph SETUP[&quot;One-Time Setup&quot;]
+        A[&quot;Create project + system prompt&quot;]
+        B[&quot;Run file interviews&quot;]
+        A --&gt; B
+    end
+
+    B --&gt; KB[(&quot;Knowledge base&lt;br&gt;superResume · jobParameters · bragDoc&lt;br&gt;perfFeedback · connections · aiAssessment&quot;)]
+
+    subgraph LOOP[&quot;Active Search Loop&quot;]
+        C[&quot;Outreach or role found&quot;]
+        D{&quot;Passes job parameters?&quot;}
+        E[&quot;Decline / defer&quot;]
+        F[&quot;Attach JD to Folio chat&quot;]
+        G[&quot;Targeted resume outline&quot;]
+        H[&quot;Submit application&quot;]
+        I[&quot;Interview prep&quot;]
+        J[&quot;Interview&quot;]
+        K{&quot;Offer received?&quot;}
+        L[&quot;Negotiate&quot;]
+        M[&quot;Accept or decline&quot;]
+        N[&quot;Close + update pipeline&quot;]
+    end
+
+    subgraph MAINT[&quot;Ongoing Maintenance&quot;]
+        P[&quot;Weekly brag doc&quot;]
+        Q[&quot;Connections refresh&quot;]
+        R[&quot;Pipeline review&quot;]
+    end
+
+    KB --&gt;|&quot;informs&quot;| F
+    KB --&gt;|&quot;informs&quot;| I
+    C --&gt; D
+    D --&gt;|&quot;No&quot;| E
+    D --&gt;|&quot;Yes&quot;| F
+    F --&gt; G
+    G --&gt; H
+    H --&gt; I
+    I --&gt; J
+    J --&gt; K
+    K --&gt;|&quot;No&quot;| N
+    K --&gt;|&quot;Yes&quot;| L
+    L --&gt; M
+    M --&gt; N
+    N --&gt; R
+    R --&gt;|&quot;new cycle&quot;| C
+    P --&gt;|&quot;updates&quot;| KB
+    Q --&gt;|&quot;updates&quot;| KB</pre> </div> <div class="dg-card-body"> <div class="dg-card-head"> <h2>Folio Workflow</h2> <span class="type-tag" style="background: #b3cde3"> flowchart </span> </div> <p class="dg-caption">modern job seeking framework leveraging contextual ai knowledge bases and active loop management.</p> </div> </a><a href="/diagrams/multi-tenant-rbac-api-token-schema" class="dg-card" style="animation: fadeUp .5s 0.04s ease both"> <div class="dg-thumb" data-slug="multi-tenant-rbac-api-token-schema"> <pre class="mermaid">erDiagram
+      users {
+          uuid id PK
+          varchar email
+          timestamptz invited_at
+          timestamptz created_at
+          timestamptz updated_at
+          timestamptz deleted_at
+          bool is_sso_user
+          bool is_anonymous
+      }
+
+      tenants {
+          uuid id PK
+          text domain
+          text slug
+          timestamptz created_at
+          timestamptz updated_at
+          timestamptz archived_at
+          tenant_status status
+          text display_name
+          text crm_ref_id
+          bool allow_sandbox
+          bool allow_papayaion
+          string tier_key FK &quot;refer tenant_usage_policies&quot;
+      }
+
+      tenant_usage_policies {
+          text tier_key PK &quot;e.g. free, pro, enterprise&quot;
+          int max_tokens_per_user &quot;enforced at creation&quot;
+          int rate_limit_rpm &quot;enforced at runtime&quot;
+          uuid[] allowed_roles FK &quot;allow-list of role ids&quot;
+      }
+
+      roles {
+          uuid id PK
+          timestamptz created_at
+          timestamptz updated_at
+          text name
+          uuid tenant_id FK
+          timestamptz archived_at
+          _permission permissions
+      }
+
+      tenant_members {
+          uuid user_id
+          uuid tenant_id
+          timestamptz created_at
+      }
+
+      user_roles {
+          uuid id PK
+          timestamptz created_at
+          timestamptz updated_at
+          uuid user_id FK
+          uuid role_id FK
+      }
+
+      api_keys {
+          uuid id PK
+          uuid user_id FK &quot;owner&quot;
+          uuid tenant_id FK &quot;limits + scopes&quot;
+          text name &quot;User-defined label&quot;
+          text token_prefix &quot;first 8 chars (Plain Text)&quot;
+          text token_hash &quot;secure_hash (Secret)&quot;
+          timestamptz last_used_at
+          timestamptz expires_at
+          timestamptz created_at
+          timestamptz updated_at
+          timestamptz deleted_at
+      }
+
+      api_key_roles {
+          uuid id PK
+          timestamptz created_at
+          timestamptz updated_at
+          uuid token_id FK
+          uuid role_id FK
+      }
+
+      audit_logs {
+          uuid id PK
+          uuid token_id FK
+          uuid actor_user_id FK &quot;who performed the action&quot;
+          text event_type &quot;CREATED, REVOKED, MODIFIED&quot;
+          jsonb metadata &quot;IP, User Agent, Diff&quot;
+          timestamptz created_at
+      }
+
+      activity_logs {
+          uuid id PK
+          uuid token_id FK
+          text request_type &quot;API, Webhook, etc.&quot;
+          jsonb metadata &quot;request, response, current usage/limits&quot;
+          timestamptz created_at &quot;partition key&quot;
+      }
+
+      %% Relationships
+      tenant_members ||--|| users : &quot;has&quot;
+      tenant_members }|--|| tenants : &quot;belongs to&quot;
+      user_roles ||--|| users : &quot;has&quot;
+      user_roles ||--|| roles : &quot;assigned to&quot;
+      roles }|--|| tenants : &quot;belongs to&quot;
+      tenant_usage_policies ||--|{ tenants : &quot;defines_limits&quot;
+      users ||--|{ api_keys : &quot;owns&quot;
+      tenants ||--|{ api_keys : &quot;has many&quot;
+      api_keys ||--|{ audit_logs : &quot;external history&quot;
+      users ||--|| audit_logs : &quot;actor&quot;
+      api_keys ||--|{ activity_logs : &quot;internal history&quot;
+      api_keys ||--|{ api_key_roles : &quot;has&quot;
+      roles ||--|{ api_key_roles : &quot;assigned to&quot;</pre> </div> <div class="dg-card-body"> <div class="dg-card-head"> <h2>Multi-Tenant RBAC &amp; API Token Schema</h2> <span class="type-tag" style="background: #ccebc5"> erDiagram </span> </div> <p class="dg-caption">relational database schema for multi-tenant isolation, user roles, and scoped api key tracking.</p> </div> </a><a href="/diagrams/report-lifecycle-state-machine" class="dg-card" style="animation: fadeUp .5s 0.08s ease both"> <div class="dg-thumb" data-slug="report-lifecycle-state-machine"> <pre class="mermaid">stateDiagram-v2
+
+	state ReportStatus {
+	  [*] --&gt; INCOMING
+
+		INCOMING --&gt; CREATED
+
+	  CREATED --&gt; NOTIFIED
+	  CREATED --&gt; EXPIRED
+	  CREATED --&gt; STALE
+
+	  NOTIFIED --&gt; FEEDBACK_PROVIDED
+	  NOTIFIED --&gt; EXPIRED
+	  NOTIFIED --&gt; STALE
+
+	  FEEDBACK_PROVIDED --&gt; EXPIRED
+	  FEEDBACK_PROVIDED --&gt; STALE
+
+	  EXPIRED --&gt; [*]
+	  STALE --&gt; [*]
+	  FEEDBACK_PROVIDED --&gt; [*]
+	  NOTIFIED --&gt; [*]
+
+	  UNKNOWN
+	}</pre> </div> <div class="dg-card-body"> <div class="dg-card-head"> <h2>Report Lifecycle State Machine</h2> <span class="type-tag" style="background: #fed9a6"> stateDiagram </span> </div> <p class="dg-caption">state machine tracking the transactional status phases of a processed report.</p> </div> </a><a href="/diagrams/report-state-lifecycle" class="dg-card" style="animation: fadeUp .5s 0.12s ease both"> <div class="dg-thumb" data-slug="report-state-lifecycle"> <pre class="mermaid">stateDiagram
+      direction TB
+      classDef complete fill:#d4edda,stroke:#155724,color:#155724;
+      classDef inprogress fill:#fff3cd,stroke:#856404,color:#856404;
+      classDef planned fill:#dbeafe,stroke:#1e3a8a,color:#1e3a8a;
+      classDef available fill:#ede9fe,stroke:#6b21a8,color:#6b21a8;
+      classDef skipped fill:#f8d7da,stroke:#721c24,color:#721c24;
+
+      state ItemLifecycle {
+          direction TB
+          [*] --&gt; Source_Created : 🟣 Warehouse Sync
+          Source_Created --&gt; Record_Loaded : ✅ RecordService#Load
+          Record_Loaded --&gt; Record_Notified : ✅ NotificationService#Notify non-notified
+          Record_Notified --&gt; Record_Updated : ✅ update notified_at, notified historicals
+          Record_Notified --&gt; Record_Feedback_Provided : ✅ Consumer Dashboard UX
+          Record_Feedback_Provided --&gt; Record_Actioned : ✅ &quot;Acknowledge &amp; Action&quot; UX
+          Record_Feedback_Provided --&gt; Record_Unactioned : ✅ &quot;Acknowledge No Action&quot; UX
+          Record_Feedback_Provided --&gt; Record_Disagreed : ✅ &quot;Dismiss&quot; UX
+          Record_Actioned --&gt; Record_Updated : ✅ update provided_feedback, actioned_at
+          Record_Unactioned --&gt; Record_Updated : ✅ update provided_feedback, unactioned_at
+          Record_Disagreed --&gt; Record_Updated : ✅ update provided_feedback, disagreed_at
+          Record_Feedback_Provided --&gt; Source_Removed
+          Record_Feedback_Provided --&gt; Source_Unresolvable
+
+          [*] --&gt; Source_Removed : 🟣 Warehouse Sync
+          Record_Loaded --&gt; Source_Removed
+          Record_Notified --&gt; Source_Removed
+          Source_Removed --&gt; Record_Stale_Update : ✅ AuditService#StaleCheck
+          Record_Stale_Update --&gt; Record_Updated : ✅ update stale_at, audited_at, historical_tracking_id
+
+          [*] --&gt; Source_Unresolvable : 🟣 Warehouse Sync
+          Record_Loaded --&gt; Source_Unresolvable
+          Record_Notified --&gt; Source_Unresolvable
+          Source_Unresolvable --&gt; Record_Unresolvable_Update : ✅ AuditService#ResolutionCheck
+          Record_Unresolvable_Update --&gt; Record_Updated : ✅ update expiry, expired_at, audited_at, historical_tracking_id
+
+          [*] --&gt; Source_Updated : 🟣 Warehouse Sync
+          Source_Updated --&gt; Record_Audit_Update : ✅ AuditService#ChangeCheck
+          Record_Audit_Update --&gt; Record_Updated : ✅ update stale, expiry, ids, timestamps
+
+          Record_Loaded --&gt; Record_Deleted: ✅ RecordService#Delete
+          Record_Notified --&gt; Record_Deleted: ✅ RecordService#Delete
+          Record_Updated --&gt; Record_Deleted: ✅ RecordService#Delete
+
+          Record_Loaded --&gt; [*]: ✅ Warehouse Sync
+          Record_Notified --&gt; [*]: ✅ Warehouse Sync
+          Record_Updated --&gt; [*]: ✅ Warehouse Sync
+          Record_Deleted --&gt; [*]: ✅ Warehouse Sync
+      }
+
+      class Source_Created available
+      class Source_Removed available
+      class Source_Unresolvable available
+      class Source_Updated available
+      class Record_Loaded complete
+      class Record_Notified complete
+      class Record_Feedback_Provided complete
+      class Record_Actioned complete
+      class Record_Unactioned complete
+      class Record_Disagreed complete
+      class Record_Stale_Update complete
+      class Record_Unresolvable_Update complete
+      class Record_Audit_Update complete
+      class Record_Updated complete
+      class Record_Deleted complete</pre> </div> <div class="dg-card-body"> <div class="dg-card-head"> <h2>Report State Lifecycle</h2> <span class="type-tag" style="background: #fed9a6"> stateDiagram </span> </div> <p class="dg-caption">state machine tracking external ingestion syncs, consumer feedback loops, and automated record audits.</p> </div> </a><a href="/diagrams/report-engine-pipeline-architecture" class="dg-card" style="animation: fadeUp .5s 0.16s ease both"> <div class="dg-thumb" data-slug="report-engine-pipeline-architecture"> <pre class="mermaid">flowchart TB
+    subgraph Report Engine
+        subgraph SyncPipeline [Sync Pipeline]
+          sync_warehouse_to_nosql@{ shape: rounded }
+        end
+        subgraph DataWarehouse [Data Warehouse]
+            basket_historical_data@{ shape: win-pane }
+            coconut_historical_data@{ shape: win-pane }
+            apple_metric_historical@{ shape: win-pane }
+          papaya_historical_data@{ shape: win-pane }
+          broccoli_metric_historical@{ shape: win-pane }
+          master_report_table@{ shape: cyl }
+          subgraph LatestAppleAccess [Latest Apple Access]
+            fetch_latest_apple_data@{ shape: subproc }
+            fetch_latest_apple_by_owner@{ shape: subproc }
+          end
+          style LatestAppleAccess stroke:#e31a1c
+          subgraph LatestBroccoliAccess [Latest Broccoli Access]
+            fetch_latest_broccoli_data@{ shape: subproc }
+            fetch_latest_broccoli_by_owner@{ shape: subproc }
+          end
+          style LatestBroccoliAccess stroke:#33a02c
+          subgraph ReportAccess [Report Access]
+            fetch_apple_reports@{ shape: subproc }
+            fetch_broccoli_reports@{ shape: subproc }
+            fetch_loadable_reports@{ shape: subproc }
+            fetch_notifiable_reports@{ shape: subproc }
+            fetch_existing_reports@{ shape: subproc }
+            fetch_owner_reports@{ shape: subproc }
+            write_new_reports@{ shape: subproc }
+            modify_existing_reports@{ shape: subproc }
+          end
+          style ReportAccess stroke:#1f78b4
+        end
+        %% subgraph CloudFunctions [Cloud Functions]
+        %%   &#39;FUNCTION_TBD&#39;
+        %% end
+        subgraph GraphQLAdminAPI [GraphQL Admin API]
+          engine_reports_load@{ shape: lean-r }
+          engine_reports_audit@{ shape: lean-r }
+          engine_reports_notify@{ shape: lean-r }
+          engine_reports_delete@{ shape: lean-r }
+        end
+        subgraph GraphQLAPI [GraphQL API]
+          app_reports@{ shape: lean-l }
+          app_report_previews@{ shape: lean-l }
+          member_reports@{ shape: lean-l }
+          member_report_previews@{ shape: lean-l }
+          app_report_accept@{ shape: lean-l }
+          app_report_in_progress@{ shape: lean-l }
+          app_report_dismiss@{ shape: lean-l }
+        end
+        %% subgraph AppleHistoricalAccess
+        %%   &#39;RRH_TBD&#39;
+        %% end
+        %% subgraph BroccoliHistoricalAccess
+        %%   &#39;GRH_TBD&#39;
+        %% end
+        %% subgraph Admin DatabaseAccessor
+        %%   &#39;ADMIN_TBD&#39;
+        %% end
+        subgraph NoSQLStore [NoSQL Store]
+            CoreObjectives@{ shape: cyl }
+            NotificationLogs@{ shape: cyl }
+        end
+        subgraph ObjectStorage [Object Storage]
+            blob_event_store@{ shape: docs }
+        end
+        subgraph NotificationProvider [Notification Provider]
+            external_push_notifications{{external_push_notifications}}
+        end
+        subgraph ApplicationPortal [Application Portal]
+          UserDashboardWidget@{ shape: curv-trap }
+          AppleAssessmentReport@{ shape: curv-trap }
+          style AppleAssessmentReport fill:#e31a1c,stroke:#fb9a99
+          BroccoliOpportunityReport@{ shape: curv-trap }
+          style BroccoliOpportunityReport fill:#33a02c,stroke:#b2df8a
+        end
+    end
+
+
+    sync_warehouse_to_nosql====&gt;|CA1:call|engine_reports_audit
+    fetch_latest_apple_data---&gt;|CA2A:fetch|engine_reports_audit
+    fetch_existing_reports---&gt;|CA2B:fetch|engine_reports_audit
+    apple_metric_historical-...-&gt;|JOIN:latest_apple_historical|fetch_existing_reports
+    apple_metric_historical-...-&gt;|JOIN:notified_apple_historical|fetch_existing_reports
+    broccoli_metric_historical-...-&gt;|JOIN:latest_broccoli_historical|fetch_existing_reports
+    broccoli_metric_historical-...-&gt;|JOIN:notified_broccoli_historical|fetch_existing_reports
+    basket_historical_data-..-&gt;|JOIN:latest_basket_historical|fetch_existing_reports
+    basket_historical_data-..-&gt;|JOIN:notified_basket_historical|fetch_existing_reports
+    coconut_historical_data-..-&gt;|JOIN:latest_coconut_historical|fetch_existing_reports
+    coconut_historical_data-..-&gt;|JOIN:notified_coconut_historical|fetch_existing_reports
+    papaya_historical_data-..-&gt;|JOIN:latest_papaya_historical|fetch_existing_reports
+    papaya_historical_data-..-&gt;|JOIN:notified_papaya_historical|fetch_existing_reports
+    engine_reports_audit====&gt;|CA3:call|modify_existing_reports
+    modify_existing_reports===&gt;|CA4:update|master_report_table
+    engine_reports_audit===&gt;|CA5:UPDATE|blob_event_store
+    linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 stroke:#bebada
+
+    sync_warehouse_to_nosql====&gt;|CL1:call|engine_reports_load
+    fetch_latest_apple_data---&gt;|CL2A:fetch|engine_reports_load
+    fetch_latest_broccoli_data---&gt;|CL2B:fetch|engine_reports_load
+    fetch_loadable_reports---&gt;|CL2C:fetch|engine_reports_load
+    apple_metric_historical-...-&gt;|JOIN:latest_apple_historical|fetch_loadable_reports
+    broccoli_metric_historical-...-&gt;|JOIN:latest_broccoli_historical|fetch_loadable_reports
+    basket_historical_data-..-&gt;|JOIN:latest_basket_historical|fetch_loadable_reports
+    coconut_historical_data-..-&gt;|JOIN:latest_coconut_historical|fetch_loadable_reports
+    papaya_historical_data-..-&gt;|JOIN:latest_papaya_historical|fetch_loadable_reports
+    write_new_reports====&gt;|CL3:call|engine_reports_load
+    write_new_reports===&gt;|CL4:create|master_report_table
+    linkStyle 16,17,18,19,20,21,22,23,24,25,26 stroke:#ffffb3
+
+    sync_warehouse_to_nosql====&gt;|CN1:call|engine_reports_notify
+    fetch_notifiable_reports---&gt;|CN2:fetch|engine_reports_notify
+    apple_metric_historical-...-&gt;|JOIN:latest_apple_historical|fetch_notifiable_reports
+    broccoli_metric_historical-...-&gt;|JOIN:latest_broccoli_historical|fetch_notifiable_reports
+    basket_historical_data-..-&gt;|JOIN:latest_basket_historical|fetch_notifiable_reports
+    coconut_historical_data-..-&gt;|JOIN:latest_coconut_historical|fetch_notifiable_reports
+    papaya_historical_data-..-&gt;|JOIN:latest_papaya_historical|fetch_notifiable_reports
+    CoreObjectives---&gt;|CN3:fetch|engine_reports_notify
+    engine_reports_notify====&gt;|CN3:call|modify_existing_reports
+    modify_existing_reports===&gt;|CN4:update|master_report_table
+    engine_reports_notify---&gt;|CN5:trigger|external_push_notifications
+    engine_reports_notify====&gt;|CN6:write|NotificationLogs
+    engine_reports_notify===&gt;|CN7:CREATE|blob_event_store
+    linkStyle 27,28,29,30,31,32,33,34,35,36,37,38,39 stroke:#8dd3c7
+
+    UserDashboardWidget====&gt;|UR1A:?loaded|member_reports
+    fetch_owner_reports---&gt;|UR2A:fetch|member_reports
+    apple_metric_historical-...-&gt;|JOIN:latest_apple_historical|fetch_owner_reports
+    apple_metric_historical-...-&gt;|JOIN:notified_apple_historical|fetch_owner_reports
+    broccoli_metric_historical-...-&gt;|JOIN:latest_broccoli_historical|fetch_owner_reports
+    broccoli_metric_historical-...-&gt;|JOIN:notified_broccoli_historical|fetch_owner_reports
+    basket_historical_data-..-&gt;|JOIN:latest_basket_historical|fetch_owner_reports
+    basket_historical_data-..-&gt;|JOIN:notified_basket_historical|fetch_owner_reports
+    coconut_historical_data-..-&gt;|JOIN:latest_coconut_historical|fetch_owner_reports
+    coconut_historical_data-..-&gt;|JOIN:notified_coconut_historical|fetch_owner_reports
+    papaya_historical_data-..-&gt;|JOIN:latest_papaya_historical|fetch_owner_reports
+    papaya_historical_data-..-&gt;|JOIN:notified_papaya_historical|fetch_owner_reports
+    linkStyle 40,41,42,43,44,45,46,47,48,49,50,51 stroke:#fb8072
+
+    UserDashboardWidget====&gt;|UR1B:?preview|member_report_previews
+    fetch_latest_apple_by_owner---&gt;|UR2B1:fetch|member_report_previews
+    fetch_latest_broccoli_by_owner---&gt;|UR2B2:fetch|member_report_previews
+    apple_metric_historical-...-&gt;|JOIN:latest_apple_historical|fetch_latest_apple_by_owner
+    basket_historical_data-..-&gt;|JOIN:latest_basket_historical|fetch_latest_apple_by_owner
+    coconut_historical_data-..-&gt;|JOIN:latest_coconut_historical|fetch_latest_apple_by_owner
+    broccoli_metric_historical-...-&gt;|JOIN:latest_broccoli_historical|fetch_latest_broccoli_by_owner
+    basket_historical_data-..-&gt;|JOIN:latest_basket_historical|fetch_latest_broccoli_by_owner
+    papaya_historical_data-..-&gt;|JOIN:latest_papaya_historical|fetch_latest_broccoli_by_owner
+    linkStyle 52,53,54,55,56,57,58,59,60 stroke:#80b1d3
+
+    UserDashboardWidget====&gt;|RCA1:accept|app_report_accept
+    app_report_accept====&gt;|RCA2:call|modify_existing_reports
+    modify_existing_reports===&gt;|RCA3:update|master_report_table
+    linkStyle 61,62,63 stroke:#fdb462
+
+    UserDashboardWidget====&gt;|RCI1:in_progress|app_report_in_progress
+    app_report_in_progress====&gt;|RCI2:call|modify_existing_reports
+    modify_existing_reports===&gt;|RCI3:update|master_report_table
+    linkStyle 64,65,66 stroke:#b3de69
+
+    UserDashboardWidget====&gt;|RCD1:dismiss|app_report_dismiss
+    app_report_dismiss====&gt;|RCD2:call|modify_existing_reports
+    modify_existing_reports===&gt;|RCD3:update|master_report_table
+    linkStyle 67,68,69 stroke:#fccde5
+
+    AppleAssessmentReport====&gt;|RR1A:?loaded|app_reports
+    fetch_apple_reports---&gt;|RR2A:fetch|app_reports
+    apple_metric_historical-...-&gt;|JOIN:latest_apple_historical|fetch_apple_reports
+    apple_metric_historical-...-&gt;|JOIN:notified_apple_historical|fetch_apple_reports
+    basket_historical_data-..-&gt;|JOIN:latest_basket_historical|fetch_apple_reports
+    basket_historical_data-..-&gt;|JOIN:notified_basket_historical|fetch_apple_reports
+    coconut_historical_data-..-&gt;|JOIN:latest_coconut_historical|fetch_apple_reports
+    coconut_historical_data-..-&gt;|JOIN:notified_coconut_historical|fetch_apple_reports
+    AppleAssessmentReport====&gt;|RR1B:?preview|app_report_previews
+    fetch_apple_reports---&gt;|RR2B:fetch|app_reports
+    apple_metric_historical-...-&gt;|JOIN:latest_apple_historical|fetch_apple_reports
+    basket_historical_data-..-&gt;|JOIN:latest_basket_historical|fetch_apple_reports
+    coconut_historical_data-..-&gt;|JOIN:latest_coconut_historical|fetch_apple_reports
+    linkStyle 70,71,72,73,74,75,76,77,78,79,80,81,82 stroke:#d9d9d9
+
+    BroccoliOpportunityReport====&gt;|GR1A:?loaded|app_reports
+    fetch_broccoli_reports---&gt;|GR2A:fetch|app_reports
+    broccoli_metric_historical-...-&gt;|JOIN:latest_broccoli_historical|fetch_broccoli_reports
+    broccoli_metric_historical-...-&gt;|JOIN:notified_broccoli_historical|fetch_broccoli_reports
+    basket_historical_data-..-&gt;|JOIN:latest_basket_historical|fetch_broccoli_reports
+    basket_historical_data-..-&gt;|JOIN:notified_basket_historical|fetch_broccoli_reports
+    papaya_historical_data-..-&gt;|JOIN:latest_papaya_historical|fetch_broccoli_reports
+    papaya_historical_data-..-&gt;|JOIN:notified_papaya_historical|fetch_broccoli_reports
+    BroccoliOpportunityReport====&gt;|GR1B:?preview|app_report_previews
+    fetch_broccoli_reports---&gt;|GR2B:fetch|app_reports
+    broccoli_metric_historical-...-&gt;|JOIN:latest_broccoli_historical|fetch_broccoli_reports
+    basket_historical_data-..-&gt;|JOIN:latest_basket_historical|fetch_broccoli_reports
+    papaya_historical_data-..-&gt;|JOIN:latest_papaya_historical|fetch_broccoli_reports
+    linkStyle 83,84,85,86,87,88,89,90,91,92,93,94,95 stroke:#bc80bd</pre> </div> <div class="dg-card-body"> <div class="dg-card-head"> <h2>Report Engine Pipeline Architecture</h2> <span class="type-tag" style="background: #b3cde3"> flowchart </span> </div> <p class="dg-caption">system architecture detailing warehouse synchronization, batch data ingestion, api processing layers, and notification triggers.</p> </div> </a><a href="/diagrams/ml-ingestion-reverse-etl" class="dg-card" style="animation: fadeUp .5s 0.20s ease both"> <div class="dg-thumb" data-slug="ml-ingestion-reverse-etl"> <pre class="mermaid">%%{ init: { &#39;flowchart&#39;: {&#39;defaultRenderer&#39;: &#39;elk&#39; } } }%%
+    flowchart TB
+      subgraph Ingest
+          CRM[Enterprise CRM]---&gt;|Automated ELT|bqa[(Staging Layer)]
+          ProductAnalytics[Product Analytics]---&gt;|Automated ELT|bqa
+          ExtWarehouse[External Data Partner]---&gt;|Automated ELT|bqa
+          SupportDesk[Support Desk Platform]---&gt;|Automated ELT|bqa
+          ObjectStorage[Raw Object Storage]---&gt;|Automated ELT|bqa
+      end
+      bqa--&gt;|normalize|bqp[(Normalized Inputs)]
+      bqp--&gt;|medallion ingest|mlc[ML Platform]
+      mlc--&gt;|model_retrain|mlc
+      mlc--&gt;|model_inference|mlc
+      mlc--&gt;|ML artifacts|bqc[(ML Outputs)]
+      bqc--&gt;|post-processing|bqp1[(Normalized Outputs)]
+      subgraph Export
+          bqp1--&gt;|rETL Sync|dest_crm[Enterprise CRM]
+          bqp1--&gt;|rETL Sync|dest_cs[Customer Success Tool]
+          bqp1--&gt;|rETL Sync|dest_warehouse[External Data Partner]
+      end</pre> </div> <div class="dg-card-body"> <div class="dg-card-head"> <h2>ML Ingestion &amp; Reverse ETL</h2> <span class="type-tag" style="background: #b3cde3"> flowchart </span> </div> <p class="dg-caption">architectural topology of a multi-source ingestion pipeline, data warehouse normalization loop, and reverse-etl sync.</p> </div> </a><a href="/diagrams/pr-review-lifecycle-classed" class="dg-card" style="animation: fadeUp .5s 0.24s ease both"> <div class="dg-thumb" data-slug="pr-review-lifecycle-classed"> <pre class="mermaid">graph TB
+        %% Semantic Node Definitions
+        Inspire([Coding Inspiration])
+        WIP[WIP]
+        PROpened[PR Opened]
+        Draft{Draft PR?}
+        Ready{Ready for Review?}
+        MarkReady[Mark as Ready]
+        Review{Code Review?}
+        Reviewed{Reviewed?}
+        Merge[Squashed &amp; Merged]
+        Staging[Staging Deploy]
+        QA{QA?}
+        Prod[Prod Deploy]
+        Done([Done Done])
+
+        %% Process Flow
+        Inspire --&gt; WIP
+        WIP --&gt;|Checkpoint| PROpened
+        PROpened --&gt; Draft
+        WIP --&gt;|Updates| Draft
+        Draft --&gt;|Yes| Ready
+        Inspire --&gt;|Hotfix| Review
+        WIP --&gt;|Addressing Feedback| Review
+        Ready --&gt;|Yes| MarkReady
+        Ready --&gt;|No| WIP
+        MarkReady --&gt; Review
+        Draft --&gt;|No| Review
+        Review --&gt;|Async| Reviewed
+        Review --&gt;|Sync| Reviewed
+        Review --&gt;|Upstream Changes| WIP
+        Reviewed --&gt;|Approved| Merge
+        Reviewed --&gt;|Suggested Changes| WIP
+        Reviewed --&gt;|Upstream Changes| WIP
+        Merge --&gt;|Passing CICD| Staging
+        Merge --&gt;|CICD Issues| Inspire
+        Staging --&gt; QA
+        QA --&gt;|Staging QA&#39;d| Prod
+        QA --&gt;|Staging Issues| Inspire
+        Prod --&gt; QA
+        QA --&gt;|Prod QA&#39;d| Done
+        QA --&gt;|Prod Issues| Inspire
+
+        %% Color-Coding (Green=Streamlined, Yellow=Slow, Red=Breakage)
+        linkStyle 0,1,2,4,5,7,8,9,10,14,17,19,22,23 stroke:#2ec4b6,stroke-width:1px;
+        linkStyle 3,6,12,13,15,16 stroke:#ffb703,stroke-width:2px;
+        linkStyle 11,18,20,21,24 stroke:#e63946,stroke-width:4px;</pre> </div> <div class="dg-card-body"> <div class="dg-card-head"> <h2>PR Review Lifecycle &amp; Bottleneck Analysis</h2> <span class="type-tag" style="background: #b3cde3"> flowchart </span> </div> <p class="dg-caption">visualizing pull request flow with node-based friction styling.</p> </div> </a><a href="/diagrams/ml-model-lineage-and-scoring-schema" class="dg-card" style="animation: fadeUp .5s 0.28s ease both"> <div class="dg-thumb" data-slug="ml-model-lineage-and-scoring-schema"> <pre class="mermaid">erDiagram
+      TenantConfig ||--|{ PredictiveModel : has
+      PredictiveModel ||--|{ ModelSegment : targets
+      PredictiveModel ||--|{ ModelOutcome : targets
+      ModelOutcome ||--|{ ModelFeature : targets
+      PredictiveModel ||--o{ ModelOutput : produces
+      ModelSegment ||--|{ Account : CHURN_APPLE
+      ModelSegment ||--|{ Contract : DOWNGRADE_APPLE
+      ModelSegment ||--|{ Product : EXPANSION_OPPORTUNITY
+      Account ||--o{ Contract : has
+      Account ||--o{ Product : has
+      Contract ||--o{ Product : passthrough
+      AppleReport ||--o{ Account : CRITICAL_CHURN
+      AppleReport ||--o{ Account : PARTIAL_CHURN
+      AppleReport ||--o{ Contract : REVENUE_AT_APPLE
+      BroccoliReport ||--o{ Product : UPSELL_BROCCOLI
+      Account ||--o{ ModelOutput : predictive_apple_score
+      Account ||--o{ ModelOutput : predictive_broccoli_score</pre> </div> <div class="dg-card-body"> <div class="dg-card-head"> <h2>Predictive ML Model Lineage &amp; Scoring Schema</h2> <span class="type-tag" style="background: #ccebc5"> erDiagram </span> </div> <p class="dg-caption">relational database schema for tracking ml model configurations, feature targeting, and downstream scoring outputs.</p> </div> </a> </main> <footer class="dg-foot"> <span>j4n00. diagrams · 8 entries</span> <a href="https://github.com/jtferns" target="_blank" rel="noreferrer">github ↗</a> </footer> </div> </body></html>  <script type="module" src="/_astro/index.astro_astro_type_script_index_0_lang.DtIE4Osu.js"></script>
