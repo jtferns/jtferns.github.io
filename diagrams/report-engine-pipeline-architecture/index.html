@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" href="/favicon.ico"><meta name="generator" content="Astro v6.4.4"><meta name="description" content="weekend prototyper · rdm enjoyer · deckbuilder"><link rel="canonical" href="https://jtferns.github.io/diagrams/report-engine-pipeline-architecture/"><title>report engine pipeline architecture · j4n00.</title><meta property="og:type" content="website"><meta property="og:url" content="https://jtferns.github.io/diagrams/report-engine-pipeline-architecture/"><meta property="og:title" content="report engine pipeline architecture · j4n00."><meta property="og:description" content="weekend prototyper · rdm enjoyer · deckbuilder"><meta property="og:image" content="https://jtferns.github.io/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="report engine pipeline architecture · j4n00."><meta name="twitter:description" content="weekend prototyper · rdm enjoyer · deckbuilder"><meta name="twitter:image" content="https://jtferns.github.io/og-image.png"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><style>.astro-route-announcer{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}:root{--font-display: "Space Grotesk", system-ui, sans-serif;--font-body: "Space Grotesk", system-ui, sans-serif;--font-mono: "Space Mono", ui-monospace, Menlo, monospace;--pastel-salmon: #fbb4ae;--pastel-blue: #b3cde3;--pastel-green: #ccebc5;--pastel-purple: #decbe4;--pastel-orange: #fed9a6;--pastel-yellow: #ffffcc;--pastel-tan: #e5d8bd;--pastel-pink: #fddaec;--pastel-gray: #f2f2f2;--ink: #1a1a1a;--ink-900: #111827;--ink-700: #374151;--ink-600: #6b7280;--ink-tag: #1f2937;--accent-link: #7c3aed;--fg1: rgba(0, 0, 0, .85);--fg2: rgba(0, 0, 0, .45);--fg3: rgba(0, 0, 0, .28);--fg4: rgba(0, 0, 0, .2);--fg-footer: rgba(0, 0, 0, .4);--border-strong: rgba(0, 0, 0, .7);--border-hairline: rgba(0, 0, 0, .2);--surface-card: rgba(255, 255, 255, .7);--surface-hover: rgba(0, 0, 0, .06);--radius-xs: 2px;--radius-sm: 3px;--radius-md: .5rem;--radius-pill: 9999px;--border-thin: 1px;--border-thick: 2px;--track-tight: -.04em;--track-normal: .04em;--track-wide: .18em;--track-wider: .22em}*,*:before,*:after{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0;width:100%;min-height:100%;font-family:var(--font-body);color:var(--ink);-webkit-font-smoothing:antialiased}#bg{position:fixed;inset:0;z-index:-1;animation:colorchange 180s infinite;will-change:background-color}@keyframes colorchange{0%{background:#fbb4ae}6%{background:#b3cde3}12%{background:#ccebc5}18%{background:#decbe4}24%{background:#fed9a6}30%{background:#ffc}36%{background:#e5d8bd}42%{background:#fddaec}48%{background:#f2f2f2}54%{background:#f2f2f2}60%{background:#fddaec}66%{background:#e5d8bd}72%{background:#ffc}78%{background:#fed9a6}84%{background:#decbe4}90%{background:#ccebc5}96%{background:#b3cde3}to{background:#fbb4ae}}@keyframes fadeUp{0%{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media(prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style>
+<link rel="stylesheet" href="/_astro/diagrams.BMtpsgA8.css"></head> <body> <div id="bg" data-astro-transition-persist="astro-coppatqy-1"></div>  <a href="/diagrams" class="backlink">← diagrams</a> <div class="detail" id="detail"> <div class="stage-col"> <div class="stage" id="stage"> <div class="canvas" id="canvas" data-definition="flowchart TB
+    subgraph Report Engine
+        subgraph SyncPipeline [Sync Pipeline]
+          sync_warehouse_to_nosql@{ shape: rounded }
+        end
+        subgraph DataWarehouse [Data Warehouse]
+            basket_historical_data@{ shape: win-pane }
+            coconut_historical_data@{ shape: win-pane }
+            apple_metric_historical@{ shape: win-pane }
+          papaya_historical_data@{ shape: win-pane }
+          broccoli_metric_historical@{ shape: win-pane }
+          master_report_table@{ shape: cyl }
+          subgraph LatestAppleAccess [Latest Apple Access]
+            fetch_latest_apple_data@{ shape: subproc }
+            fetch_latest_apple_by_owner@{ shape: subproc }
+          end
+          style LatestAppleAccess stroke:#e31a1c
+          subgraph LatestBroccoliAccess [Latest Broccoli Access]
+            fetch_latest_broccoli_data@{ shape: subproc }
+            fetch_latest_broccoli_by_owner@{ shape: subproc }
+          end
+          style LatestBroccoliAccess stroke:#33a02c
+          subgraph ReportAccess [Report Access]
+            fetch_apple_reports@{ shape: subproc }
+            fetch_broccoli_reports@{ shape: subproc }
+            fetch_loadable_reports@{ shape: subproc }
+            fetch_notifiable_reports@{ shape: subproc }
+            fetch_existing_reports@{ shape: subproc }
+            fetch_owner_reports@{ shape: subproc }
+            write_new_reports@{ shape: subproc }
+            modify_existing_reports@{ shape: subproc }
+          end
+          style ReportAccess stroke:#1f78b4
+        end
+        %% subgraph CloudFunctions [Cloud Functions]
+        %%   'FUNCTION_TBD'
+        %% end
+        subgraph GraphQLAdminAPI [GraphQL Admin API]
+          engine_reports_load@{ shape: lean-r }
+          engine_reports_audit@{ shape: lean-r }
+          engine_reports_notify@{ shape: lean-r }
+          engine_reports_delete@{ shape: lean-r }
+        end
+        subgraph GraphQLAPI [GraphQL API]
+          app_reports@{ shape: lean-l }
+          app_report_previews@{ shape: lean-l }
+          member_reports@{ shape: lean-l }
+          member_report_previews@{ shape: lean-l }
+          app_report_accept@{ shape: lean-l }
+          app_report_in_progress@{ shape: lean-l }
+          app_report_dismiss@{ shape: lean-l }
+        end
+        %% subgraph AppleHistoricalAccess
+        %%   'RRH_TBD'
+        %% end
+        %% subgraph BroccoliHistoricalAccess
+        %%   'GRH_TBD'
+        %% end
+        %% subgraph Admin DatabaseAccessor
+        %%   'ADMIN_TBD'
+        %% end
+        subgraph NoSQLStore [NoSQL Store]
+            CoreObjectives@{ shape: cyl }
+            NotificationLogs@{ shape: cyl }
+        end
+        subgraph ObjectStorage [Object Storage]
+            blob_event_store@{ shape: docs }
+        end
+        subgraph NotificationProvider [Notification Provider]
+            external_push_notifications{{external_push_notifications}}
+        end
+        subgraph ApplicationPortal [Application Portal]
+          UserDashboardWidget@{ shape: curv-trap }
+          AppleAssessmentReport@{ shape: curv-trap }
+          style AppleAssessmentReport fill:#e31a1c,stroke:#fb9a99
+          BroccoliOpportunityReport@{ shape: curv-trap }
+          style BroccoliOpportunityReport fill:#33a02c,stroke:#b2df8a
+        end
+    end
+
+
+    sync_warehouse_to_nosql====>|CA1:call|engine_reports_audit
+    fetch_latest_apple_data--->|CA2A:fetch|engine_reports_audit
+    fetch_existing_reports--->|CA2B:fetch|engine_reports_audit
+    apple_metric_historical-...->|JOIN:latest_apple_historical|fetch_existing_reports
+    apple_metric_historical-...->|JOIN:notified_apple_historical|fetch_existing_reports
+    broccoli_metric_historical-...->|JOIN:latest_broccoli_historical|fetch_existing_reports
+    broccoli_metric_historical-...->|JOIN:notified_broccoli_historical|fetch_existing_reports
+    basket_historical_data-..->|JOIN:latest_basket_historical|fetch_existing_reports
+    basket_historical_data-..->|JOIN:notified_basket_historical|fetch_existing_reports
+    coconut_historical_data-..->|JOIN:latest_coconut_historical|fetch_existing_reports
+    coconut_historical_data-..->|JOIN:notified_coconut_historical|fetch_existing_reports
+    papaya_historical_data-..->|JOIN:latest_papaya_historical|fetch_existing_reports
+    papaya_historical_data-..->|JOIN:notified_papaya_historical|fetch_existing_reports
+    engine_reports_audit====>|CA3:call|modify_existing_reports
+    modify_existing_reports===>|CA4:update|master_report_table
+    engine_reports_audit===>|CA5:UPDATE|blob_event_store
+    linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 stroke:#bebada
+
+    sync_warehouse_to_nosql====>|CL1:call|engine_reports_load
+    fetch_latest_apple_data--->|CL2A:fetch|engine_reports_load
+    fetch_latest_broccoli_data--->|CL2B:fetch|engine_reports_load
+    fetch_loadable_reports--->|CL2C:fetch|engine_reports_load
+    apple_metric_historical-...->|JOIN:latest_apple_historical|fetch_loadable_reports
+    broccoli_metric_historical-...->|JOIN:latest_broccoli_historical|fetch_loadable_reports
+    basket_historical_data-..->|JOIN:latest_basket_historical|fetch_loadable_reports
+    coconut_historical_data-..->|JOIN:latest_coconut_historical|fetch_loadable_reports
+    papaya_historical_data-..->|JOIN:latest_papaya_historical|fetch_loadable_reports
+    write_new_reports====>|CL3:call|engine_reports_load
+    write_new_reports===>|CL4:create|master_report_table
+    linkStyle 16,17,18,19,20,21,22,23,24,25,26 stroke:#ffffb3
+
+    sync_warehouse_to_nosql====>|CN1:call|engine_reports_notify
+    fetch_notifiable_reports--->|CN2:fetch|engine_reports_notify
+    apple_metric_historical-...->|JOIN:latest_apple_historical|fetch_notifiable_reports
+    broccoli_metric_historical-...->|JOIN:latest_broccoli_historical|fetch_notifiable_reports
+    basket_historical_data-..->|JOIN:latest_basket_historical|fetch_notifiable_reports
+    coconut_historical_data-..->|JOIN:latest_coconut_historical|fetch_notifiable_reports
+    papaya_historical_data-..->|JOIN:latest_papaya_historical|fetch_notifiable_reports
+    CoreObjectives--->|CN3:fetch|engine_reports_notify
+    engine_reports_notify====>|CN3:call|modify_existing_reports
+    modify_existing_reports===>|CN4:update|master_report_table
+    engine_reports_notify--->|CN5:trigger|external_push_notifications
+    engine_reports_notify====>|CN6:write|NotificationLogs
+    engine_reports_notify===>|CN7:CREATE|blob_event_store
+    linkStyle 27,28,29,30,31,32,33,34,35,36,37,38,39 stroke:#8dd3c7
+
+    UserDashboardWidget====>|UR1A:?loaded|member_reports
+    fetch_owner_reports--->|UR2A:fetch|member_reports
+    apple_metric_historical-...->|JOIN:latest_apple_historical|fetch_owner_reports
+    apple_metric_historical-...->|JOIN:notified_apple_historical|fetch_owner_reports
+    broccoli_metric_historical-...->|JOIN:latest_broccoli_historical|fetch_owner_reports
+    broccoli_metric_historical-...->|JOIN:notified_broccoli_historical|fetch_owner_reports
+    basket_historical_data-..->|JOIN:latest_basket_historical|fetch_owner_reports
+    basket_historical_data-..->|JOIN:notified_basket_historical|fetch_owner_reports
+    coconut_historical_data-..->|JOIN:latest_coconut_historical|fetch_owner_reports
+    coconut_historical_data-..->|JOIN:notified_coconut_historical|fetch_owner_reports
+    papaya_historical_data-..->|JOIN:latest_papaya_historical|fetch_owner_reports
+    papaya_historical_data-..->|JOIN:notified_papaya_historical|fetch_owner_reports
+    linkStyle 40,41,42,43,44,45,46,47,48,49,50,51 stroke:#fb8072
+
+    UserDashboardWidget====>|UR1B:?preview|member_report_previews
+    fetch_latest_apple_by_owner--->|UR2B1:fetch|member_report_previews
+    fetch_latest_broccoli_by_owner--->|UR2B2:fetch|member_report_previews
+    apple_metric_historical-...->|JOIN:latest_apple_historical|fetch_latest_apple_by_owner
+    basket_historical_data-..->|JOIN:latest_basket_historical|fetch_latest_apple_by_owner
+    coconut_historical_data-..->|JOIN:latest_coconut_historical|fetch_latest_apple_by_owner
+    broccoli_metric_historical-...->|JOIN:latest_broccoli_historical|fetch_latest_broccoli_by_owner
+    basket_historical_data-..->|JOIN:latest_basket_historical|fetch_latest_broccoli_by_owner
+    papaya_historical_data-..->|JOIN:latest_papaya_historical|fetch_latest_broccoli_by_owner
+    linkStyle 52,53,54,55,56,57,58,59,60 stroke:#80b1d3
+
+    UserDashboardWidget====>|RCA1:accept|app_report_accept
+    app_report_accept====>|RCA2:call|modify_existing_reports
+    modify_existing_reports===>|RCA3:update|master_report_table
+    linkStyle 61,62,63 stroke:#fdb462
+
+    UserDashboardWidget====>|RCI1:in_progress|app_report_in_progress
+    app_report_in_progress====>|RCI2:call|modify_existing_reports
+    modify_existing_reports===>|RCI3:update|master_report_table
+    linkStyle 64,65,66 stroke:#b3de69
+
+    UserDashboardWidget====>|RCD1:dismiss|app_report_dismiss
+    app_report_dismiss====>|RCD2:call|modify_existing_reports
+    modify_existing_reports===>|RCD3:update|master_report_table
+    linkStyle 67,68,69 stroke:#fccde5
+
+    AppleAssessmentReport====>|RR1A:?loaded|app_reports
+    fetch_apple_reports--->|RR2A:fetch|app_reports
+    apple_metric_historical-...->|JOIN:latest_apple_historical|fetch_apple_reports
+    apple_metric_historical-...->|JOIN:notified_apple_historical|fetch_apple_reports
+    basket_historical_data-..->|JOIN:latest_basket_historical|fetch_apple_reports
+    basket_historical_data-..->|JOIN:notified_basket_historical|fetch_apple_reports
+    coconut_historical_data-..->|JOIN:latest_coconut_historical|fetch_apple_reports
+    coconut_historical_data-..->|JOIN:notified_coconut_historical|fetch_apple_reports
+    AppleAssessmentReport====>|RR1B:?preview|app_report_previews
+    fetch_apple_reports--->|RR2B:fetch|app_reports
+    apple_metric_historical-...->|JOIN:latest_apple_historical|fetch_apple_reports
+    basket_historical_data-..->|JOIN:latest_basket_historical|fetch_apple_reports
+    coconut_historical_data-..->|JOIN:latest_coconut_historical|fetch_apple_reports
+    linkStyle 70,71,72,73,74,75,76,77,78,79,80,81,82 stroke:#d9d9d9
+
+    BroccoliOpportunityReport====>|GR1A:?loaded|app_reports
+    fetch_broccoli_reports--->|GR2A:fetch|app_reports
+    broccoli_metric_historical-...->|JOIN:latest_broccoli_historical|fetch_broccoli_reports
+    broccoli_metric_historical-...->|JOIN:notified_broccoli_historical|fetch_broccoli_reports
+    basket_historical_data-..->|JOIN:latest_basket_historical|fetch_broccoli_reports
+    basket_historical_data-..->|JOIN:notified_basket_historical|fetch_broccoli_reports
+    papaya_historical_data-..->|JOIN:latest_papaya_historical|fetch_broccoli_reports
+    papaya_historical_data-..->|JOIN:notified_papaya_historical|fetch_broccoli_reports
+    BroccoliOpportunityReport====>|GR1B:?preview|app_report_previews
+    fetch_broccoli_reports--->|GR2B:fetch|app_reports
+    broccoli_metric_historical-...->|JOIN:latest_broccoli_historical|fetch_broccoli_reports
+    basket_historical_data-..->|JOIN:latest_basket_historical|fetch_broccoli_reports
+    papaya_historical_data-..->|JOIN:latest_papaya_historical|fetch_broccoli_reports
+    linkStyle 83,84,85,86,87,88,89,90,91,92,93,94,95 stroke:#bc80bd"></div> </div> <div class="controls"> <button class="ctl" id="zoomOut" title="zoom out" aria-label="zoom out">−</button> <span class="zoom-label" id="zoomLabel">100%</span> <button class="ctl" id="zoomIn" title="zoom in" aria-label="zoom in">+</button> <button class="ctl" id="fit" title="fit to view" aria-label="fit to view"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5"></path> </svg> </button> <button class="ctl" id="full" title="fullscreen" aria-label="fullscreen"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path> </svg> </button> </div> <div class="hint">drag to pan · scroll to zoom</div> </div> <aside class="meta"> <div> <p class="eyebrow">flowchart</p> <h1>Report Engine Pipeline Architecture</h1> </div> <div class="tag-row"> <span class="type-tag" style="background: #b3cde3">flowchart</span> </div> <p class="caption">system architecture detailing warehouse synchronization, batch data ingestion, api processing layers, and notification triggers.</p> <hr class="rule"> <p class="notes">apples and broccoli, referenced across time via historicals. processed through simple async APIs. a complex tapestry of states, simplified. legacy data stores and constraints, bridged with modern wires.</p> <ul class="specs"> <li><span class="k">type</span><span>flowchart</span></li> <li><span class="k">updated</span><span>Dec 2025</span></li> </ul> <nav class="prevnext"> <a href="/diagrams/report-state-lifecycle" class="pn prev">  <span class="pn-k">← prev</span> <span>Report State Lifecycle</span>  </a> <a href="/diagrams/ml-ingestion-reverse-etl" class="pn next">  <span class="pn-k">next →</span> <span>ML Ingestion &amp; Reverse ETL</span>  </a> </nav> </aside> </div> </body></html> <script type="module" src="/_astro/_slug_.astro_astro_type_script_index_0_lang.D-ilXFBu.js"></script>
